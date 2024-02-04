@@ -11,16 +11,16 @@
 5. Now convert image labels into one hot encoded vector for further
 processing.
 6. Normalised the pixel values for better performance of the model.
-##Previous and Current Setup:
+## Previous and Current Setup:
 1. We experimented with different neural network architectures, including a deep neural network (DNN) and Histogram Oriented Gradient features combined with Convolution layer features. Despite efforts to address overfitting using various regularization methods, the test accuracy remained at 50.8% for the DNN and 55.7% for other models due to the abundance of features.
 2. In a subsequent approach, we combined a convolutional network with a simple autoencoder (shallow network), which yielded improved results. The autoencoder focused on learning essential feature representations, akin to capturing the top 512 eigenvalues (orthogonal basis), out of the total 4608 values, as indicated by the model summary. This contrasted with DNNs, which were found to learn redundant values beyond the necessary information.
-##CNN Model:
+## CNN Model:
 a. 5 convolution layers to learn the features.
 b. ReLU activation function chosen to overcome the saturation neuron effect.
 c. BatchNormalization used to give learning rate more freedom
 d. Dropoutisusedtounderminetheeffectofoverfitting.
 e. Shallow neural network.
-##Compilation:
+## Compilation:
 1. Loss Function: Cross-Entropy Loss as it is a multi-class classification problem
 2. Optimizer: We chose Adam as it is better than SGD here.
 3. Metrics: We choose accuracy as it is one of the primary goals of this project.
